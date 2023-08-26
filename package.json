@@ -1,6 +1,6 @@
 {
-    "homepage": "/gamewinner-scheduling-app",
-    "name": "gamewinnerscheduling-app",
+    "homepage": "/jot-scheduling-app",
+    "name": "jot-scheduling-app",
     "version": "0.1.0",
     "private": true,
     "dependencies": {
@@ -42,4 +42,4 @@
       "gh-pages": "^4.0.0",
       "react-router-dom": "^6.6.1"
     }
-  }  
+  }
