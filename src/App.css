@@ -1,8 +1,8 @@
 /* Color theme & max width variables */
 :root {
-    --primary: #1C3144;
-    --secondary: #3F88C5;
-    --accent: #FF8C42;
+    --primary: #fafafa;
+    --secondary: #ca5400;
+    --accent: #fefefe;
     --max-width: 1086px;
   }
   

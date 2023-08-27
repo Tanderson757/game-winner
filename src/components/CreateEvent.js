@@ -136,7 +136,7 @@ export default function CreateEvent(props) {
       
       // DO NOT USE postNewEvent(props.newEventId) as that still picks up empty string from original value set in App.js
       
-      props.setAllEventIds = [...props.setAllEventIds, newId]
+
     
     } else {
 
@@ -155,7 +155,13 @@ export default function CreateEvent(props) {
           <label htmlFor="eventTemplate">Event Template: </label>
             <select name="availability" onChange={e => onTemplateSelect(e)} defaultValue={0} style={{width: "200px"}}>
                   <option value={0}>None</option>
-                  <option value={1}>Tigers Volleyball</option>
+                  <option value={1}>Fantasy Football Draft Day Extravaganza</option>
+                  <option value={1}>Gridiron Glory Fantasy League Kickoff</option>
+                  <option value={1}>Touchdown Tailgate: Fantasy Football Season Opener</option>
+                  <option value={1}>Monday Night Matchup Madness</option>
+                  <option value={1}>Thursday Night Throwdown</option>
+                  <option value={1}>Sunday Funday</option>
+                  <option value={1}>Sunday Night Showdown</option>
             </select>
           </div>
           <div>

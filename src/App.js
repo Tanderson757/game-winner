@@ -12,7 +12,7 @@ import './App.css';
 
 export default function App() {
   const title = "gamewinner";
-  const tagline = "Scheduling made easy";
+  const tagline = "Embrace Victory: Game Winner Where Triumph and Glory Await!";
 
   const API_ENDPOINT = "https://jot-api-service.onrender.com";
 

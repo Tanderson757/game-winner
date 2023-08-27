@@ -2,6 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <!-- Favicon and viewport settings -->
     <link rel="icon" href="%PUBLIC_URL%/846593.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#000000" />
@@ -9,11 +10,8 @@
       name="description"
       content="Web site created using create-react-app"
     />
+    <!-- Apple touch icon and manifest file for PWA -->
     <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
-      manifest.json provides metadata used when your web app is installed on a
-      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
-    -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
@@ -24,20 +22,42 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>Game Winner</title>
+    <!-- Page title -->
+    <title>{{pageTitle}}</title>
   </head>
   <body>
+    <!-- Display message for users with JavaScript disabled -->
     <noscript>You need to enable JavaScript to run this app.</noscript>
+    <!-- Root container for the React application -->
     <div id="root"></div>
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
-
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <!-- Handlebars.js template -->
+    <script id="page-template" type="text/x-handlebars-template">
+      <h1>{{pageTitle}}</h1>
+      <p>{{pageDescription}}</p>
+      <div id="root"></div>
+    </script>
+    <!-- Include Handlebars.js library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+    <script>
+      // Get the template source
+      const source = document.getElementById("page-template").innerHTML;
+      // Compile the template
+      const template = Handlebars.compile(source);
+      // Context data for the template
+      const context = {
+        pageTitle: "Game Winner",
+        pageDescription: "Lets see who is the winner of the game"
+      };
+      // Generate HTML from the template and context
+      const html = template(context);
+      // Replace the body content with the generated HTML
+      document.body.innerHTML = html;
+    </script>
   </body>
 </html>
