@@ -84,7 +84,7 @@ export default function ViewAllEvents(props) {
 
   useEffect(() => {
     checkInput(input);
-  }, [input]);
+  }, []);
   
 
   return (
